@@ -21,3 +21,4 @@ def probando_template(request):
 	mi_documento = mi_template.render(mi_contexto)
 	return HttpResponse(mi_documento)
 
+holaaaaaaa
