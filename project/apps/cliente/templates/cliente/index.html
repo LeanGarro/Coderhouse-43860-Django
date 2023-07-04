@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenido a mi projecto Django</h1>
+    {% for client in cliente %}
+    <p>client.nombre</p>    
+    <p>client.apellido</p>
+    <p>client.pais_origen</p>
+    
+    {% endfor %}
+
+    {% url 'home:home' %}
+
+</body>
+</html>
