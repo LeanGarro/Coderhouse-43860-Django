@@ -1,0 +1,15 @@
+{% extends 'Home/base.html' %}
+
+{% block TITULO %}
+  crear cliente
+{% endblock TITULO %}
+
+{% block contenido %}
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <a href=""></a>
+{% endblock contenido %}

@@ -27,6 +27,6 @@ urlpatterns = [
     path("probando_template/", views.probando_template),
     path("ahora/", views.ahora),
     path("amigos", views.amigos),
-    path("cliente/", include("cliente.urls")),
-    path("producto", include("producto.urls")),
+    #path("cliente/", include("clientes.urls")),
+
 ]

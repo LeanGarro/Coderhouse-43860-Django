@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from .models import Cliente, Pais
+from .forms import ClienteForm
 
 
 def home(request):
@@ -21,3 +22,15 @@ def crear_clientes(request):
     
     c1.save()
     return redirect("Cliente:home")
+
+def crear_cliente(request):
+    
+    if request.method == "POST":
+        form = ClienteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("Cliente:home")
+    else:
+        form= ClienteForm()
+        
+    return render(request, "cliente/crear.html", {"form":form})
